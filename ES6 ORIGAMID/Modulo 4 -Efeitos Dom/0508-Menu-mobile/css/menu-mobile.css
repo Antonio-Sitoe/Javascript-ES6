@@ -1,0 +1,60 @@
+[data-menu="button"]{
+    display:none;
+}
+
+
+@media(max-width:700px){
+    .js  [data-menu="button"]{
+        display:flex;
+        align-items: center;
+        background: #222;
+        border: none;
+        padding: .5rem 1rem;
+        border-radius:4px ;
+        text-transform: uppercase;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+        position: relative;
+        z-index: 200;
+        transition: transform .3s ;
+    }
+    .js  [data-menu="button"].ative::before{
+        transform: rotate(90deg);
+    }
+
+    .js [data-menu="button"]::before{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 12px;
+        background:white;
+        box-shadow: 0 4px 0 #fff, 0 -4px 0;
+        margin-right: 4px;
+    }
+
+    .js [data-menu="lista"]{
+        position: absolute;
+        background: #fb5;
+        display: none;
+        max-width: 160px;
+        width: 100%;
+        display: none;
+        padding: 60px 0 20px 0;
+        box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
+        top: 0;
+        z-index: 100;
+    }
+
+    .js [data-menu="lista"].ative{
+        display: block;
+        animation: show-right .3s forwards;
+    }
+
+    .js .dropdown-menu{
+        position: static;
+
+    }
+}

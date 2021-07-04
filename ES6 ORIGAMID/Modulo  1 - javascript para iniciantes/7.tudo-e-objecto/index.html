@@ -1,0 +1,143 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Criador de textos</title>
+<style>
+  html,body,h1,h2,p, ul,li,a{
+  margin: 0;
+  padding: 0;
+background: teal;
+}
+button {
+margin: 10px;
+}
+
+h3{
+color: gray;
+font-weight: bold;
+padding-top: 10px;
+}
+
+span {
+color: red;
+}
+.textarea{
+  margin-top: 30px;
+  height: 150px;
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  font-family:'Courier New', Courier, monospace ;
+}
+
+.header{
+  height: 300px;
+
+  color: white;
+  width: 100%;
+}
+
+.card{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: -150px;
+  background: whitesmoke;
+  box-shadow: 8px 4px 8px  10PX rgb(0, 0,0, .7);
+  text-align: center;
+}
+
+.copiar{
+  padding: 20px 30px;
+  background: teal;
+  border-radius: 8px;
+  border: 1px solid bisque;
+  color: whitesmoke;
+}
+
+.footer{
+
+  font-style: italic;
+  text-align: center;
+  color: whitesmoke;
+}
+</style>
+
+</head>
+
+<body>
+  <div onLoad="primeclick();">
+   
+      <div class="header">
+     
+      </div>
+      <!-- Esta é a parte do codigo que interessa -->
+       <div class="card">
+          
+        
+        
+
+   
+    <div class="main">
+        <h3>Escreve qualquer coisa no Campo a seguir.</h3>
+         <textarea class="textarea">Vamos copiar este texto?</textarea>
+      <br>
+      <button class="copiar" id="btncp">Copiar Texto</button>
+    </div>
+      </div>
+    <div class="footer">
+       $design by Antonio Sitoe
+    </div>
+
+
+  <script>
+    /*
+$( "button:first" ).click(function() {
+update( $( "span:first" ) );
+});
+
+$( "button:last" ).click(function() {
+$( "button:first" ).trigger( "click" );
+update( $( "span:last" ) );
+});
+
+function update( j ) {
+var n = parseInt( j.text(), 10 );
+j.text( n + 1 );
+}
+*/
+//Copiar
+var copyTextareaBtn = document.querySelector('.copiar');
+
+copyTextareaBtn.addEventListener('click', function(event) {
+var copyTextarea = document.querySelector('.textarea');
+copyTextarea.select();
+alert("selecionei");
+try {
+var successful = document.execCommand('copy');
+alert("executei o comando");
+var msg = successful ? 'sim!' : 'não!';
+alert('Texto copiado? ' + msg);
+} catch (err) {
+alert('Opa, Não conseguimos copiar o texto, é possivel que o seu navegador não tenha suporte, tente usar Crtl+C.');
+}
+});
+function primeclick() {
+alert("entrei");
+setTimeout("executaclick()",30000);
+alert("praparei");
+}
+function executaclick(){
+clearTimeout();
+$( "#btncp" ).trigger( "click" );
+}
+  </script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</body>
+
+</html>

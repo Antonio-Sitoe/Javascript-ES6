@@ -1,0 +1,43 @@
+//Variaveis e tipos de dados
+
+
+/*  VAR    LET    CONST    */
+var  nome = 'Antonio';
+var idade = 21
+const pussuiFaculdadde= true
+console.log(`${nome} e idade ${idade} `  )
+ var preco = 25
+ var total = 5
+ var multiplicado= preco * total
+ console.log(multiplicado)
+
+ var cidade = `Rio`
+ var sobrenome=`Manuel`
+
+
+ var pessoa = `extrea`;
+ var sem;
+
+ console.log(sem)
+
+
+ //variaveis comecam com cifrao
+ var $aquelDia = `caseSensitive`
+ 
+ //comentario
+ /*comentario*/
+
+ //HOSTING
+
+ console.log(comida)
+ var comida = `pizza1`
+
+
+ //podemos mudar os valores atribuidos
+var time = `vasco`
+time=`flamengo`
+
+let danca = `bondoro`;
+    danca = `maphico`
+
+    
