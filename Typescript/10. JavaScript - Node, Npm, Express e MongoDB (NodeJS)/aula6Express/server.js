@@ -1,4 +1,4 @@
-require("dotenv").config()
+require("dotenv").config();
 
 // busca o express
 const express = require("express");
@@ -11,13 +11,22 @@ const mongoose = require("mongoose");
 //conectar a base de dados
 
 mongoose
-  .connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("Conexao a BD")
-    app.emit("Pronto");
-  }).catch(e=>{
-    console.log(e)
+  .connect(process.env.CONNECTIONSTRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
+  .then(() => {
+    app.emit("Pronto");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+
+//chamar a session
+const session = require("express-session");
+
+const MongoStore = require("connect-mongo")(session);
+const flash = require("connect-flash");
 
 // colocar a porta
 const port = 3000;
@@ -36,6 +45,20 @@ app.use(express.urlencoded({ extended: true }));
 
 // conteudo estatico
 app.use(express.static(path.resolve(__dirname, "public")));
+
+const sessionOptions = session({
+  secret: "Antonio dsdss Sito e()",
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+    httpOnly: true,
+  },
+});
+
+app.use(sessionOptions)
+app.use(flash())
 
 // usando a rota
 app.use(routes);
