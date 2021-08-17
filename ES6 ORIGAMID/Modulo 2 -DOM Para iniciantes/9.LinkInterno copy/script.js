@@ -49,6 +49,7 @@ function initScrollSuave() {
    function scrolltosection(event) {
       event.preventDefault();
       const href = event.currentTarget.getAttribute('href')
+      console.log(href)
       const section = document.querySelector(href)
       section.scrollIntoView({
          behavior: "smooth",
