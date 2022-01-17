@@ -1,93 +1,33 @@
-// const instrumentos = ['guitarra', 'hello']
+const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
+// Remova o primeiro valor de comidas e coloque em uma variável
+// Remova o último valor de comidas e coloque em uma variável
+const first = comidas.shift();
+const last = comidas.pop();
+const addL = comidas.push('arroz');
+const add = comidas.unshift('Peixe', 'Batata');
 
+// console.log(first);
+// console.log(last);
+// console.log(comidas);
+// Adicione 'Arroz' ao final da array
+// Adicione 'Peixe' e 'Batata' ao início da array
 
-// const li = document.querySelectorAll('li')
+const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
+// Arrume os estudantes em ordem alfabética
+console.log(estudantes.sort());
+// Inverta a ordem dos estudantes
+console.log(estudantes.reverse());
 
-
-
-// const arraylike = Array.from(li)
-
-
-// const frutas = ['banana', 'turanja', 'manga']
-// frutas.sort();
-// console.log(frutas)
-
-
-// const carros = ['kia', 'fiat', 'honda']
-// carros.unshift('ferrari', 'mustang')
-// carros.push('velocite')
-// // console.log(carros)
-
-// carros.pop()
-// console.log(carros)
-// console.log(carros.splice(2, 0,'fusca'))
-// console.log(carros)
-
-
-// console.log(['item1','item2','item3','item4'].fill('banana', 0,3))
-
-// const transpo1= ['barco', 'item2']
-// const transpo2 = ['pura', 'vazia']
-
-// const arrc = transpo1.concat(transpo2)
-// console.log([].concat(arrc, 'van'))
-
-// console.log(arrc.includes('css'))
-
-
-
-const comidas = ['pizza', 'frango', 'carne', 'macarrao'];
-const removeFist = comidas.shift()
-const removeLast = comidas.pop()
-console.log(removeFist)
-console.log(removeLast)
-const add = comidas.concat('arroz')
-console.log(add)
-
-const splicet = comidas.splice(0,0,'peixe', 'batata',)
-
-console.log(comidas)
-
-const estudantes = ['marcio', 'brenda', 'joana', 'kleber','julia']
-console.log(estudantes.sort())
-estudantes.reverse()
-console.log(estudantes)
-
-console.log(estudantes.includes('joana'))
-console.log(estudantes.includes('joliana'))
-
-
-
+console.log(estudantes.includes('Joana' && 'Juliana'));
+console.log(estudantes);
+// Verifique se Joana faz parte dos estudantes
+// Verifique se Juliana faz parte dos estudantes
 let html = `<section>
-                <div>Sobre</div>
-                <div>Produtos</div>
-                <div>Contactos</div>
-            <section>`
-//substitua section por ul e div com li
-//utilizando split e join
-html = html.split('section').join('ul')
-html = html.split('div').join('li')
-
-console.log(html)
-const carros = ['ford', 'fiat','vw', 'honda' ]
-const novoCarros = carros.slice();
-
-carros.pop()
-
-console.log(carros)
-
-
-console.log(novoCarros)
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div>Sobre</div>
+<div>Produtos</div>
+<div>Contato</div>
+</section>`;
+// Substitua section por ul e div com li,
+// utilizando split e joinconst carros = ['Ford', 'Fiat', 'VW', 'Honda'];
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável
