@@ -1,32 +1,17 @@
-function verificar(dado) {
-   return Object.prototype.toString.call(dado)
-}
-console.log(verificar({}))
+const moto = {
+  rodas: 1,
+};
 
+Object.defineProperties(moto, {
+  rodas: {
+    value: 4,
+    enumerable: true,
+    writable: true,
+    configurable: false,
+  },
+});
 
-const objectQuadrado = {
-}
-Object.defineProperties(objectQuadrado, {
-   lado: {
-      value: 4,
-      enumerable: true,
-   },
-})
-
-Object.freeze(objectQuadrado)
-
-console.log(objectQuadrado)
-
-
-const configuracao = {
-   width: 800,
-   height: 600,
-   background: "#333",
-}
-
-Object.freeze(configuracao)
-delete configuracao.width;
-console.log(configuracao)
-
-console.log(Object.getOwnPropertyNames(Array.prototype))
-console.log(Object.getOwnPropertyNames(String.prototype))
+const frutas = {};
+const frutas1 = {};
+const n = frutas;
+console.log(Object.is(frutas1, n));
