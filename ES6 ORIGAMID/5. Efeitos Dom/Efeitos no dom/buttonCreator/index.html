@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="button-creator">
+      <form action="" id="controles">
+        <label for="texto">Texto</label>
+        <input type="text" id="texto" name="texto" />
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color" />
+        <label for="backgroundColor">Background color</label>
+        <input type="color" id="backgroundColor" name="backgroundColor" />
+        <label for="height">height</label>
+        <input type="range" name="height" id="height" />
+        <label for="width">width</label>
+        <input type="range" name="width" id="width" />
+        <label for="border">Border</label>
+        <input type="text" name="border" id="border" />
+        <label for="borderRadius">Border Radius</label>
+        <input
+          type="range"
+          id="borderRadius"
+          name="borderRadius"
+          min="0"
+          max="20"
+        />
+
+        <select name="fontFamily" id="fontFamily">
+          <option value="arial">Arial</option>
+          <option value="monospace">Monospace</option>
+        </select>
+        <label for="fontSize">Fonte size</label>
+        <input type="number" name="fontSize" id="fontSize" />
+      </form>
+
+      <section class="resultado">
+        <button class="btn">clique</button>
+        <pre> <code class="css"></code></pre>
+      </section>
+    </section>
+
+    <script src="js.js"></script>
+  </body>
+</html>

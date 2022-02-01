@@ -1,0 +1,23 @@
+import initScrollSuave from './modules/scrollsuave.js';
+import initTabNav from './modules/initTabNav.js';
+import initModal from './modules/modal.js';
+import tooltip from './modules/tooltip.js';
+import fetchAnimais from './modules/fetchAnimais.js';
+import dropDownMenu from './modules/dropDownMenu.js';
+import funcionamento from './modules/funcionamento.js';
+import fecthBitCoin from './modules/fecthBitCoin.js';
+import mobile from './modules/mobile.js';
+import { initAnimacaoScroll } from './modules/animacaoScroll.js';
+import { initAccordion } from './modules/accordion.js';
+
+initAnimacaoScroll();
+initScrollSuave();
+funcionamento();
+initAccordion();
+fecthBitCoin();
+fetchAnimais();
+dropDownMenu();
+initTabNav();
+initModal();
+tooltip();
+mobile();
