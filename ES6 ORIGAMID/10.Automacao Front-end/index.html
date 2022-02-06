@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        height: 30rem;
+        background: rgb(119, 87, 87);
+        margin: 5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu" data-menu="suave">
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">
+        Menu
+      </button>
+      <ul id="menu" data-menu="lista">
+        <li><a href="#animais">Animais</a></li>
+
+        <li><a href="#faq">Faq</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a data-modal="abrir" href="https://www.origamid.com/">Login →</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="animais"></section>
+
+    <section id="faq"></section>
+    <section id="contato"></section>
+  </body>
+</html>
